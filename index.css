@@ -1,0 +1,20 @@
+#top-bar {
+    height: 8%;
+    width: 100%;
+    background-color: orange;
+    border: 2px solid black;
+}
+
+#content-body {
+    height: 80%;
+    width: 100%;
+    background-color: darkseagreen;
+    border: 2px solid black;
+}
+
+#bottom-bar {
+    height: 12%;
+    width: 100%;
+    background-color: greenyellow;
+    border: 2px solid black;
+}
