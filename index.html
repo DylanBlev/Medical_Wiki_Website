@@ -10,29 +10,48 @@
 
     <body>
         <div id="top-bar">
-            <h1>This is the Top Bar!</h1>
+            <h1>Medical Wiki</h1>
         </div>
         
         <div id="content-body" class="flex-container">
 
+            <table>
+                <tr>
+                    <td><a href="pages/regular_checkup.html"><button>Regular Checkup</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="pages/bloodwork.html"><button>Bloodwork</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="pages/scans.html"><button>Scans</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="pages/vaccinations.html"><button>Vaccinations</button></a></td>
+                </tr>
+            </table>
 
-            <a href="pages/onepage.html"><h1>first page</h1></a>
-
-
-            <h1>This is the Body!</h1>
-            <div id="content-sidebar-1">
-                <h1>This is side bar 1!</h1>
-            </div>
-            <div id="content-sidebar-2">
-                <h1>This is side bar 2!</h1>
-            </div>
 
         </div>
 
         <div id="bottom-bar">
-            <h1>This is the Bottom Bar!</h1>
+            <table>
+                <tr>
+                    <td>
+                        <h1>This is the Bottom Bar!</h1>
+                    </td>
+                    <td>
+                        <button onclick="toggleInvert()">Invert Colors</button>
+                        <script>
+                            function toggleInvert(){
+                                document.body.classList.toggle('invert')
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
         </div>
         
     </body>
 
 </html>
+
