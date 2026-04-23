@@ -15,16 +15,40 @@
         
         <div id="content-body" class="flex-container">
 
+            <table>
+                <tr>
+                    <td><a href="pages/regular_checkup.html"><button>Regular Checkup</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="pages/bloodwork.html"><button>Bloodwork</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="pages/scans.html"><button>Scans</button></a></td>
+                </tr>
+                <tr>
+                    <td><a href="pages/vaccinations.html"><button>Vaccinations</button></a></td>
+                </tr>
+            </table>
 
-            <a href="pages/regular_checkup.html"><button>Regular Checkup</button></a>
-            <a href="pages/bloodwork.html"><button>Bloodwork</button></a>
-            <a href="pages/scans.html"><button>Scans</button></a>
-            <a href="pages/vaccinations.html"><button>Vaccinations</button></a>
 
         </div>
 
         <div id="bottom-bar">
-            <h1>This is the Bottom Bar!</h1>
+            <table>
+                <tr>
+                    <td>
+                        <h1>This is the Bottom Bar!</h1>
+                    </td>
+                    <td>
+                        <button onclick="toggleInvert()">Invert Colors</button>
+                        <script>
+                            function toggleInvert(){
+                                document.body.classList.toggle('invert')
+                            }
+                        </script>
+                    </td>
+                </tr>
+            </table>
         </div>
         
     </body>
