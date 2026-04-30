@@ -87,3 +87,14 @@ button:active:after {
 button:active {
  padding-bottom: 10px;
 }
+
+#main-page-info {
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 40%;
+}
+
+#nav-bar {
+    align-content: center;
+}
