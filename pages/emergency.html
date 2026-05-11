@@ -9,6 +9,15 @@
     </head>
 
     <body>
+        <script>
+            const inverted = (localStorage.getItem("inverted") === 'true');
+            console.log(inverted);
+            if(inverted){
+                console.log('hello!');
+                document.body.classList.add('inverted');
+            }
+        </script>
+
         <div id="top-bar">
             <h1>Emergency</h1>
         </div>
