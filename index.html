@@ -1,15 +1,11 @@
 <html lang="en">
     <script>
-        if(localStorage.getItem('inverted') !== null){
-            localStorage.setItem("inverted", false);
-        }
-
         function toggleInvert(){
                 const inverted = (localStorage.getItem("inverted") === 'true');
                 console.log(inverted);
                 console.log(typeof inverted);
             if(inverted){
-                document.body.classList.toggle('inverted');
+                document.body.classList.remove('inverted');
                 localStorage.setItem("inverted", false);
             } else {
                 document.body.classList.add('inverted');
@@ -26,7 +22,18 @@
         
     </head>
 
-    <body class="{(localStorage.getItem('inverted') === 'true') ? '.inverted' : ''}">
+    <body>
+        <script>
+            if(localStorage.getItem('inverted') === null){
+            localStorage.setItem("inverted", false);
+        } else {
+            const inverted = (localStorage.getItem("inverted") === 'true');
+            if(inverted){
+                console.log('hello!');
+                document.body.classList.add('inverted');
+            }
+        }
+        </script>
         <div id="top-bar">
             <h1>Medical Wiki</h1>
         </div>
