@@ -1,4 +1,18 @@
 <html lang="en">
+    <script>
+        function toggleInvert(){
+                const inverted = (localStorage.getItem("inverted") === 'true');
+                console.log(inverted);
+                console.log(typeof inverted);
+            if(inverted){
+                document.body.classList.remove('inverted');
+                localStorage.setItem("inverted", false);
+            } else {
+                document.body.classList.add('inverted');
+                localStorage.setItem("inverted", true);
+            }
+        }
+    </script>
 
     <head>
         <meta charset="UTF-8">
@@ -9,6 +23,17 @@
     </head>
 
     <body>
+        <script>
+            if(localStorage.getItem('inverted') === null){
+            localStorage.setItem("inverted", false);
+        } else {
+            const inverted = (localStorage.getItem("inverted") === 'true');
+            if(inverted){
+                console.log('hello!');
+                document.body.classList.add('inverted');
+            }
+        }
+        </script>
         <div id="top-bar">
             <h1>Medical Wiki</h1>
         </div>
@@ -17,7 +42,7 @@
 
             <table id="nav-bar">
                 <tr>
-                    <td><a href="pages/regular_checkup.html"><button>Regular Checkup</button></a></td>
+            <td><a href="pages/regular_checkup.html?inverted"><button>Regular Checkup</button></a></td>
                     <td><a href="pages/bloodwork.html"><button>Bloodwork</button></a></td>
                     <td><a href="pages/scans.html"><button>Scans</button></a></td>
                     <td><a href="pages/vaccinations.html"><button>Vaccinations</button></a></td>
@@ -79,11 +104,6 @@
                 <tr>
                     <td>
                         <button onclick="toggleInvert()">Invert Colors</button>
-                        <script>
-                            function toggleInvert(){
-                                document.body.classList.toggle('invert')
-                            }
-                        </script>
                     </td>
                 </tr>
             </table>
