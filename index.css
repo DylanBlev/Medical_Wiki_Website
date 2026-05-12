@@ -120,6 +120,12 @@ button:active {
     background-color: yellow;
     height: auto;
     margin-left: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
 }
 
 #nav-bar {
